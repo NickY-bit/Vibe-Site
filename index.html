@@ -6,9 +6,12 @@
   </head>
   <body class="back-row-toggle splat-toggle">
   	<audio id="playAudio" loop> <source src="rainloop.wav" type="audio/wav"> </audio>
-  	<button type="button" class="rain-sound" id="rain-sound" onclick="rainSound()"> <input type="image" src="muted.png" style="width:48px;height:48px;"> </button>
+  	<button type="button" class="rain-sound" id="rain-sound" onclick="rainSound()"> <input type="image" src="imgs/muted.png" style="width:48px;height:48px;"> </button>
   	<div class="rain" id="front-row"></div>
   	<div class="rain" id="back-row"></div>
+  	<div class="container">
+  		<div class="sliding-background"></div>
+  	</div>
   <script src="scripts.js"></script> <!--Load script at the end to avoid null reference errors-->
 </body>
 </html>
