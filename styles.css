@@ -114,3 +114,25 @@ body.splat-toggle .splat {
   margin-top: 1%;
   margin-left: 3%;
 }
+
+.container {
+	overflow: hidden;
+	position: fixed;
+	bottom: 0px;
+}
+
+.sliding-background {
+	background: url("imgs/bgloop.png") repeat-x;
+	height: 480px;
+	width: 5076px;
+	animation: slide 60s linear infinite;
+}
+
+@keyframes slide {
+	0%{
+		transform: translate3d(0, 0, 0);
+	}
+	100%{
+		transform: translate3d(-1692px, 0, 0);
+	}
+}
