@@ -6,9 +6,9 @@ var makeItRain = function() {
   var increment = 0;
   var drops = "";
   var backDrops = "";
+  
 
   while (increment < 100) {
-    console.log(increment);
     //couple random numbers to use for various randomizations
     //random number between 98 and 1
     var randoHundo = (Math.floor(Math.random() * (98 - 1 + 1) + 1));
@@ -23,6 +23,24 @@ var makeItRain = function() {
 
   document.getElementById("front-row").innerHTML += drops;
   document.getElementById("back-row").innerHTML += backDrops;
+}
+
+  var muted = true;
+  var audio = new Audio("rainloop.wav");
+  audio.loop = true;
+
+function rainSound() {
+	if (muted) {
+		audio.play();
+		muted = false;
+		document.getElementById("rain-sound").innerHTML = '<input type="image" src="speaker.png" style="width:48px;height:48px;">;'
+	} else {
+		audio.pause();
+		muted = true;
+		document.getElementById("rain-sound").innerHTML = '<input type="image" src="muted.png" style="width:48px;height:48px;">;'
+	}
+
+	console.log("playing");
 }
 
 makeItRain();
